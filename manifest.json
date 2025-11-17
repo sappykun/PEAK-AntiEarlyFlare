@@ -1,0 +1,11 @@
+{
+  "namespace": "sappykun",
+  "name": "AntiEarlyFlare",
+  "description": "Prevents players from using the flare at the Peak before a certain percentage of other players have made it.",
+  "version_number": "1.0.0",
+  "dependencies": [
+    "BepInEx-BepInExPack_PEAK-5.4.2403"
+  ],
+  "website_url": "",
+  "FullName": "sappykun-AntiEarlyFlare"
+}

@@ -221,6 +221,9 @@ node_modules/
 .idea/*
 *.sln.iml
 
+# VSCode stuff
+*.sln
+
 # End of https://www.toptal.com/developers/gitignore/api/csharp
 artifacts/*/dist/**/*
 artifacts/**/*.zip

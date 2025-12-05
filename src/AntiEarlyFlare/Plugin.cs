@@ -82,6 +82,9 @@ public partial class AntiEarlyFlare : BaseUnityPlugin
                 [HarmonyPatch("Update")]
                 public static bool BlockFlareActivation(Flare __instance)
                 {
+                        if (!PhotonNetwork.IsMasterClient)
+                                return true;
+
                         if (HasFlareBeenActivatedAtPeak(__instance) && ShouldBlockFlare())
                         {
                                 if (SmiteEarlyFlareUser is { Value: true })
@@ -121,6 +124,8 @@ public partial class AntiEarlyFlare : BaseUnityPlugin
                 [HarmonyPatch("SetFlareLitRPC")]
                 public static bool BlockFlareRPC(Flare __instance)
                 {
+                        if (!PhotonNetwork.IsMasterClient)
+                                return true;
                         return !(HasFlareBeenActivatedAtPeak(__instance) && ShouldBlockFlare());
                 }
                 
@@ -128,6 +133,8 @@ public partial class AntiEarlyFlare : BaseUnityPlugin
                 [HarmonyPatch("TriggerHelicopter")]
                 public static bool BlockHelicopterRPC(Flare __instance)
                 {
+                        if (!PhotonNetwork.IsMasterClient)
+                                return true;
                         return !(ShouldBlockFlare());
                 }
         }

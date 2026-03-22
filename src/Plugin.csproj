@@ -2,9 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>com.github.sappykun.AntiEarlyFlare</AssemblyName>
+    <AssemblyName>AntiEarlyFlare</AssemblyName>
     <AssemblyTitle>AntiEarlyFlare</AssemblyTitle>
-    <Version>1.1.0</Version>
   </PropertyGroup>
 
 </Project>

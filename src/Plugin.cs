@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using Zorro.Core;
 using System.Linq;
 
-[BepInAutoPlugin]
+[BepInPlugin("sappykun.AntiEarlyFlare", "Anti-Early Flare", "1.2.0")]
 public partial class AntiEarlyFlare : BaseUnityPlugin
 {
         internal static ManualLogSource Log { get; private set; } = null!;
@@ -30,7 +30,7 @@ public partial class AntiEarlyFlare : BaseUnityPlugin
                 CheckFlareUseBeforeFinalBiome = Config.Bind("General", "CheckFlareUseBeforeFinalBiome", false, "If enabled, checks will trigger when a flare is used in any biome.");
                 SmiteEarlyFlareUser = Config.Bind("General", "SmiteEarlyFlareUser", false, "If enabled, smites anyone trying to use the flare early.");
                 Patch();
-                Log.LogInfo($"Plugin {Name} is loaded!");
+                Log.LogInfo($"Plugin AntiEarlyFlare is loaded!");
         }
 
         private void Patch()
